@@ -1,0 +1,27 @@
+version: '3'
+services:
+  api: 
+    image: apipokemon
+    container_name: apipokemon
+    ports: 
+      - "5000:5000"
+    networks:
+      - pokemon
+    depends_on: 
+      - database
+  database:
+    image: mongo:latest
+    container_name: dbpokemon
+    ports:
+      - 27017:27017
+    networks:
+      - pokemon
+    volumes:
+      - mongodata:/data/db
+networks:
+  pokemon: 
+    driver: bridge
+volumes:
+  mongodata: 
+    driver: local
+

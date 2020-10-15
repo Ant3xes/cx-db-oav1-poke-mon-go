@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "a30f6682-34fe-4641-899f-d2becf5674f9",
+		"name": "Pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulter liste Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulter un Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier un Pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"types\" : [\r\n        \"Fée\", \r\n        \"Dragon\"\r\n    ], \r\n    \"weaknesses\" : [\r\n        \"Dragon\"\r\n    ], \r\n    \"evolution\" : [\r\n        {\r\n            \"num\" : \"002\", \r\n            \"name\" : \"Herbizarre\"\r\n        }, \r\n        {\r\n            \"num\" : \"003\", \r\n            \"name\" : \"Florizarre\"\r\n        }\r\n    ], \r\n    \"name\" : \"Bulbizarre\", \r\n    \"height\" : \"5000m\", \r\n    \"weight\" : \"4562kg\", \r\n    \"starter\" : false, \r\n    \"legendary\" : true, \r\n    \"sprite\" : \"https://cdn.traction.one/pokedex/pokemon/1.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pokemons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer un Pokemon",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
